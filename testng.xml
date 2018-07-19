@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="suite1" verbose="1">
+		<parameter name="username" value="huang.fen"/>
+		<parameter name="password" value="1"/>
+	<test name="test">
+		<classes>
+			<class name="browser.Choosebrowser"></class>
+			<class name="browser.Openclosebrowser"></class>
+			<class name="testmethod.Login"></class>
+			<class name="testmethod.Register"></class>				
+		</classes>		
+	</test>
+</suite>

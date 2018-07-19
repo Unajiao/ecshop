@@ -1,0 +1,45 @@
+<Configuration status="INFO" monitorInterval="300">  
+<!-- Configuration中的status设置为输出等级，trace-debug-info-warn-error-fatal  
+	monitorInterval属性，含义是每隔300秒重新读取配置文件，可以不重启应用的情况下修改配置--> 
+    <properties>  
+    <!--properties设置参数方便复用  -->
+        <property name="LOG_HOME">D:/logs</property>  
+        <property name="FILE_NAME">mylog</property>  
+    </properties>  
+    <Appenders>  
+    <!-- Appenders设置输出目的地和输出格式等 --> 
+        <Console name="Console" target="SYSTEM_OUT">  
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n" />  
+        </Console> 
+        <RollingRandomAccessFile name="MyFile"  
+            fileName="${LOG_HOME}/${FILE_NAME}.log"  
+            filePattern="${LOG_HOME}/$${date:yyyy-MM}/${FILE_NAME}-%d{yyyy-MM-dd}-%i.log">
+            <!-- fileName设置当前的文件名称
+             filePattern备份的文件命名规则
+             %d{yyyy-MM-dd}最小单位是dd与TimeBasedTriggeringPolicy=1配合使用表示一天一个文件
+             %d{yyyy-MM-dd HH-mm}最小单位mm与TimeBasedTriggeringPolicy=10配合使用表示10分钟一个文件-->  
+            <PatternLayout  
+                pattern="%d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n" />  
+            <Policies>  
+                <TimeBasedTriggeringPolicy interval="1" />  
+                <SizeBasedTriggeringPolicy size="10 MB" />  
+                <!-- 每天生成一个日志文件，但是如果一天内的日志文件体积已经超过1G，两个条件满足一个即可就重新生成 -->
+            </Policies>  
+            <DefaultRolloverStrategy max="20" />  
+            <!-- DefaultRolloverStrategy表示最多保存多少个文件数目 -->
+        </RollingRandomAccessFile>  
+    </Appenders>  
+    <Loggers> 
+    <!-- Loggers选择Appenders中的一部分作为实际执行的输出目的 -->
+    	<Logger name="mylog" level="trace" additivity="false"> 
+    	<!-- Logger设置了一种输出方式，如果实例化代码为 Logger logger = LogManager.getLogger("mylog")则执行此输出
+    		additivity="true"的时候Logger和root都执行--> 
+        <AppenderRef ref="Console" />  
+    	</Logger>    
+        <Root level="INFO">  
+        <!-- Root中的status设置的输出等级优先级高于Configuration；Root是默认输出的模块 --> 
+            <AppenderRef ref="Console" />  
+            <AppenderRef ref="MyFile"/>
+        </Root>  
+    </Loggers>  
+</Configuration> 
