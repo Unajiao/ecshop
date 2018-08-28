@@ -9,7 +9,7 @@ import browser.Openclosebrowser;
 import location.Register_location;
 @Test
 /**
- * 注册页面注册新的用户，用户名user+随机数，密码123456
+ * 注册页面注册新的用户。用户名user+随机数，密码123456
  * @author lenovo
  *
  */

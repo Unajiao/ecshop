@@ -10,7 +10,11 @@ import browser.Choosebrowser;
 import browser.Openclosebrowser;
 import location.Login_location;
 
-
+/**
+ * µ«¬Ω≤‚ ‘”√¿˝
+ * @author Administrator
+ *
+ */
 public class Login {
 	@DataProvider(name="user_data_provider")
 	public Object[][] user_data(){

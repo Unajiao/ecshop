@@ -7,7 +7,11 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-
+/**
+ * 登陆页面的页面元素定位
+ * @author Administrator
+ *
+ */
 public class Login_location {
 	
 	@FindBy(xpath="//font[@id='ECS_MEMBERZONE']/a[1]")

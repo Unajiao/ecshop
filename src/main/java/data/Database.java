@@ -9,11 +9,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.testng.annotations.Test;
-
-import com.mysql.jdbc.ResultSetMetaData;
-
 public class Database {
+	//test
 	public List<Map<String,String>> connect_Database(String sqlquery) {	
 	//public List<Map<String,String>> connect_Database( ) {	
 		List<Map<String, String>> list = new ArrayList<Map<String, String>>();

@@ -12,7 +12,11 @@ import static org.testng.Assert.assertEquals;
 import java.util.HashMap;
 import data.Database;
 import location.Search_location;
-
+/**
+ * ²éÑ¯ÓÃÀı
+ * @author Administrator
+ *
+ */
 public class Search_for {
 	@Test
 	public void serch() {

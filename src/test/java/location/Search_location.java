@@ -6,7 +6,11 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-
+/**
+ * 查询操作页面定位元素
+ * @author Administrator
+ *
+ */
 public class Search_location {
 	@FindBy(name="keywords")
 	private WebElement search_input;

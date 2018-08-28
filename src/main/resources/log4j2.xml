@@ -1,6 +1,7 @@
 <Configuration status="INFO" monitorInterval="300">  
 <!-- Configuration中的status设置为输出等级，trace-debug-info-warn-error-fatal  
 	monitorInterval属性，含义是每隔300秒重新读取配置文件，可以不重启应用的情况下修改配置--> 
+	<!--test -->
     <properties>  
     <!--properties设置参数方便复用  -->
         <property name="LOG_HOME">D:/logs</property>  

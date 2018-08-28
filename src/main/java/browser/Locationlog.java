@@ -6,7 +6,9 @@ import java.util.NoSuchElementException;
 import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebDriver;
-
+/**
+ * 重写定位，在定位中添加日志
+ */
 public class Locationlog extends RemoteWebDriver{
 	private org.apache.logging.log4j.Logger logger;
 	public Locationlog(URL url,Capabilities Capabilities,Class<?> clazz) {

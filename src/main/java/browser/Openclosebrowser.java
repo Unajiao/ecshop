@@ -4,7 +4,11 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterClass;
-
+/**
+ * ä¯ÀÀÆ÷Ïà¹Ø²Ù×÷
+ * @author Administrator
+ *
+ */
 public class Openclosebrowser {
 private  WebDriver driver;
 	public WebDriver openbrowser() {

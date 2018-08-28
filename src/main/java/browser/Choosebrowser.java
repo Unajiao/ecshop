@@ -16,7 +16,7 @@ public class Choosebrowser {
 	/**
 	 * 选择需要的浏览器，限制只能输入chrome或者firefox
 	 * @param browser：浏览器名称，可以为chrome或者firefox
-	 * @return driver：返回类型为driver
+	 * @return driver：返回为driver
 	 */
 	public static DriverService service;
 	public static WebDriver chooseservice(String browser) {
